@@ -10,7 +10,7 @@ import RealmSwift
 
 class ViewController: UIViewController {
     let realm = try! Realm()
-    //let tasks = TodoList
+    var tasks = TodoList()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class ViewController: UIViewController {
         }
         
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { action in
-            
+            //tasks =
         }))
         
         self.present(alert, animated: true)
@@ -36,5 +36,9 @@ class ViewController: UIViewController {
 
 
 class TodoList: Object{
-    @Persisted var task:String = ""
+    @Persisted var task: String = ""
+    convenience init(task: String) {
+        self.init()
+        self.task = task
+    }
 }

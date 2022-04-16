@@ -30,7 +30,7 @@
         <!--View Controller-->
         <scene sceneID="hcf-DU-EdH">
             <objects>
-                <viewController id="9Yl-UW-ghj" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="9Yl-UW-ghj" customClass="ViewController" customModule="Learn_Swift" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gq2-vS-lqv">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
