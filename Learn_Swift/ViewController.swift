@@ -6,39 +6,38 @@
 //
 
 import UIKit
-import RealmSwift
+import CoreData
 
 class ViewController: UIViewController {
-    let realm = try! Realm()
-    var tasks = TodoList()
-
+    let field = UITextField()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "TodoList"
     }
     
+    
     @IBAction func tapAdd(_sender: UIBarButtonItem){
         let alert = UIAlertController(title: "TodoList", message: "Please enter your to-do", preferredStyle: .alert)
+        
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         
         alert.addTextField { (textField) in
-            textField.placeholder = "enter"
+            self.field.placeholder = "enter"
+            
         }
         
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { action in
-            //tasks =
+            let container = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+            let context = container.viewContext
+            let tasks = TodoList(context: context)
+            
+            tasks.todo = self.field.text
+            
+            //self.itemArray.append(tasks)
         }))
         
         self.present(alert, animated: true)
     }
 
-}
-
-
-class TodoList: Object{
-    @Persisted var task: String = ""
-    convenience init(task: String) {
-        self.init()
-        self.task = task
-    }
 }
