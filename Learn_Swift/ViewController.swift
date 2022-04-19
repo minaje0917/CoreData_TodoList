@@ -34,6 +34,8 @@ class ViewController: UIViewController {
             
             tasks.todo = self.field.text
             
+            print(tasks.todo!)
+            
             //self.itemArray.append(tasks)
         }))
         

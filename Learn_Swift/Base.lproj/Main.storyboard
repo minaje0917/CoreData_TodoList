@@ -66,10 +66,31 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <segue destination="dzA-l3-ehO" kind="push" id="xAx-47-sta"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7iS-k0-i28" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="352" y="-1"/>
+        </scene>
+        <!--Compose View Controller-->
+        <scene sceneID="16E-U0-oF8">
+            <objects>
+                <viewController id="dzA-l3-ehO" customClass="ComposeViewController" customModule="Learn_Swift" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SEj-4W-zTi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Y4E-wn-0zH"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vnW-Mp-iMm">
+                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="6tS-bj-9wZ"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hEf-8E-rCW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1288" y="-1"/>
         </scene>
     </scenes>
     <resources>
