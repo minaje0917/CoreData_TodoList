@@ -11,13 +11,10 @@ import CoreData
 class ViewController: UIViewController {
     let field = UITextField()
     
-    let container = (UIApplication.shared.delegate as! AppDelegate).persistentContainer
-    lazy var context = container.viewContext
-    lazy var tasks = TodoList(context: context)
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "TodoList"
     }
     
     
@@ -33,14 +30,36 @@ class ViewController: UIViewController {
         
         alert.addAction(UIAlertAction(title: "Save", style: .default, handler: { [self] action in
             
-            self.tasks.todo = alert.textFields?[0].text ?? .init()
-            print("tasks: \(self.tasks.todo)")
+            //self.tasks.todo = alert.textFields?[0].text ?? .init()
+            //print("tasks: \(self.tasks.todo)")
             
             //self.itemArray.append(tasks)
             
         }))
         
         self.present(alert, animated: true)
+    }
+    
+    func getAllItem() {
+        do {
+            let items = try context.fetch(TodoList.fetchRequest())
+        }
+        catch{
+            // error
+        }
+        
+    }
+    
+    func createItem(name: String) {
+        let newitem = TodoList(context: <#T##NSManagedObjectContext#>)
+    }
+    
+    func deleteItem(item: TodoList) {
+        
+    }
+    
+    func updateItem(item: TodoList) {
+        
     }
 
 }
