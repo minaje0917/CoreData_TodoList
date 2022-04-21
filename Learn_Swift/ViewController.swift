@@ -70,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func getAllItem() {
         do {
             models = try context.fetch(TodoList.fetchRequest())
-            DispatchQueue.main.sync {
+            DispatchQueue.main.async {
                 self.tableView.reloadData()
             }
         }
