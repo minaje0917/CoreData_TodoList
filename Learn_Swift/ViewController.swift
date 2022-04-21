@@ -24,6 +24,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         view.addSubview(tableView)
+        getAllItem()
         tableView.delegate = self
         tableView.dataSource = self
         tableView.frame = view.bounds
@@ -38,6 +39,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         cell.textLabel?.text = model.todo
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let item = models[indexPath.row]
+        let sheet = UIAlertController(title: "Edit", message: nil, preferredStyle: .actionSheet)
+        
+        sheet.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        sheet.addAction(UIAlertAction(title: "Edit", style: .default, handler: { _ in
+            
+        }))
+        sheet.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { _ in
+            self.deleteItem(item: item)
+        }))
+        
+        present(sheet, animated: true)
     }
     
     @IBAction func tapAdd(_sender: UIBarButtonItem){
@@ -56,11 +73,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             }
             
             self?.createItem(todo: text)
-            
-            //self.tasks.todo = alert.textFields?[0].text ?? .init()
-            //print("tasks: \(self.tasks.todo)")
-            
-            //self.itemArray.append(tasks)
             
         }))
         
