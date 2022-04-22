@@ -11,7 +11,6 @@
 		7744CE50280CE5360079CBCD /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7744CE4E280CE5360079CBCD /* Model.xcdatamodeld */; };
 		7744CE53280D08B70079CBCD /* TodoList+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744CE51280D08B70079CBCD /* TodoList+CoreDataClass.swift */; };
 		7744CE54280D08B70079CBCD /* TodoList+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7744CE52280D08B70079CBCD /* TodoList+CoreDataProperties.swift */; };
-		7766B1DA280ED66E00066B01 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7766B1D9280ED66E00066B01 /* ComposeViewController.swift */; };
 		77F87A2C2808F93B004791D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F87A2B2808F93B004791D2 /* AppDelegate.swift */; };
 		77F87A2E2808F93B004791D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77F87A2D2808F93B004791D2 /* SceneDelegate.swift */; };
 		77F87A332808F93B004791D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77F87A312808F93B004791D2 /* Main.storyboard */; };
@@ -24,7 +23,6 @@
 		7744CE4F280CE5360079CBCD /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		7744CE51280D08B70079CBCD /* TodoList+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7744CE52280D08B70079CBCD /* TodoList+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodoList+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7766B1D9280ED66E00066B01 /* ComposeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		77F87A282808F93B004791D2 /* Learn_Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Learn_Swift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		77F87A2B2808F93B004791D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		77F87A2D2808F93B004791D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,7 +72,6 @@
 				77F87A362808F93C004791D2 /* LaunchScreen.storyboard */,
 				77F87A392808F93C004791D2 /* Info.plist */,
 				7744CE4E280CE5360079CBCD /* Model.xcdatamodeld */,
-				7766B1D9280ED66E00066B01 /* ComposeViewController.swift */,
 			);
 			path = Learn_Swift;
 			sourceTree = "<group>";
@@ -161,7 +158,6 @@
 				77F87A2E2808F93B004791D2 /* SceneDelegate.swift in Sources */,
 				7744CE50280CE5360079CBCD /* Model.xcdatamodeld in Sources */,
 				7744CE54280D08B70079CBCD /* TodoList+CoreDataProperties.swift in Sources */,
-				7766B1DA280ED66E00066B01 /* ComposeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
